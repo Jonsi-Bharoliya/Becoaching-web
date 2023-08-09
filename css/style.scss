@@ -1,0 +1,1385 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .container {
+    max-width:1140px;
+    margin: 0 auto;
+  }
+
+  $space: Space Grotesk;
+  $inter: Inter;
+  $white: #ffffff;
+  $green: #7AE7C7;
+  $black: #07242C;
+  $gray-dark: #4A5E61;
+  $gray: #a8a8a8;
+  $gray-light: #6d8386;
+  $black-dark: #262828;
+  $bgcolor: #182f35;
+  $body: #112429;
+
+
+  .justify-content-center {
+    justify-content: center;
+  }
+
+  .justify-content-end {
+    justify-content: center;
+  }
+
+  .justify-content-between {
+    justify-content: space-between;
+  }
+
+  .align-items-center {
+    align-items: center;
+  }
+
+  .w-15 {
+    width: 15%;
+  }
+
+  .w-10 {
+    width: 10%;
+  }
+
+  .w-90 {
+    width: 90%;
+  }
+
+  .w-60 {
+    width: 60%;
+  }
+
+  .w-40 {
+    width: 40%;
+  }
+
+  .w-75 {
+    width: 75%;
+  }
+
+  .w-25 {
+    width: 25%;
+    padding: 12px;
+  }
+
+  .w-85 {
+    width: 85%;
+  }
+
+  .w-50 {
+    width: 50%;
+  }
+
+  .w-55 {
+    width: 55%;
+  }
+
+  .w-33 {
+    width: 33.33%;
+  }
+
+  .w-45 {
+    width: 45%;
+  }
+
+  .w-35 {
+    width: 35%;
+  }
+
+  .w-65 {
+    width: 65%;
+  }
+
+  @mixin btn {
+    background-color: #2c464a;
+    color: $green;
+    font-family: $space;
+    font-size: 15px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 1s;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  @mixin btn-hover {
+    background-color: $green;
+    color: #2c464a;
+    font-weight: 700;
+  }
+
+
+  @mixin btn1 {
+    background-color: $bgcolor;
+    color: $green;
+    font-size: 14px;
+    font-family: $space;
+    padding: 8px 30px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+
+  header {
+    background-color: $bgcolor;
+    position: fixed;
+    padding: 0 59px 40px;
+    text-align: center;
+    
+
+    .logo {
+      img {
+        padding: 70px 50px 70px 50px;
+
+      }
+    }
+
+    .menu {
+      padding: 0 0 20px 0;
+
+      ul li {
+        padding: 10px 0;
+        text-align: center;
+      }
+     ul li:first-child a{
+      color: $green;
+     }
+
+
+      a {
+        font-family: $inter;
+        font-size: 16px;
+        color: $gray-light;
+
+      }
+
+      a:hover {
+        color: $green;
+
+      }
+    }
+
+    .btn {
+      @include btn;
+    }
+
+    .btn:hover {
+      @include btn-hover;
+    }
+
+
+    p {
+      color: $white;
+      font-size: 16px;
+      font-family: $inter;
+      text-align: center;
+      line-height: 1.75;
+      padding-bottom: 150px;
+      padding: 30px 0 180px 0;
+    }
+
+    .icon {
+      text-align: center;
+
+      i {
+        color: $white;
+        font-size: 15px;
+        padding: 20px 5px;
+        text-align: center;
+        transition: all 2s;
+        cursor: pointer;
+        
+      &:hover {
+        color: $green;
+      }
+      }
+
+    }
+  }
+
+  .slider {
+    background-image: url('../img/coaching3-slider-pic3.svg');
+    background-color: $body;
+    background-repeat: no-repeat;
+    padding: 0 90px 0 165px;
+    background-position: -40% -90%;
+    position: relative;
+    width: 100%;
+    overflow-X: hidden;
+
+    .image {
+      width: 100%;
+      position: relative;
+
+      img {
+        z-index: 1111;
+      }
+
+      .img5 {
+        position: absolute;
+        top: 20%;
+        right: 80%;
+        animation: ball 2s linear infinite;
+        width: 10%;
+      }
+
+      .img6 {
+        position: absolute;
+        top: 60%;
+        right: 25%;
+        animation: ball 2s linear infinite;
+        width: 20%;
+      }
+    }
+
+    .image::before {
+      position: absolute;
+      content: '';
+      background-image:url('../img/coaching3-slider-pic2.svg');
+      width: 720px;
+      height: 720px;
+      background-repeat: no-repeat;
+      right:50px;
+      z-index: -1;
+      top: 14%;
+      animation: spin 2.5s linear infinite;
+     
+    }
+    
+
+    .content {
+      width: 100%;
+      position: relative;
+
+      .btn1 {
+        @include btn1;
+      }
+
+      h1 {
+        font-size: 70px;
+        color: $white;
+        font-family: $space;
+        padding: 20px 0 0 0;
+      }
+
+      h2 {
+        font-size: 70px;
+        color: $green;
+        font-family: $space;
+        padding: 0 0 40px 0;
+      }
+
+      p {
+        color: $white;
+        padding-bottom: 30px;
+        line-height: 1.5;
+        font-family: $space;
+        font-size: 20px;
+      }
+
+      .btn2 {
+        background-color: $green;
+        font-size: 22px;
+        font-family: $space;
+        color: $black-dark;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 30px;
+        font-weight: 900;
+        transition: all 1s;
+        z-index: 99999999;
+        
+      a{
+        color: $black-dark;
+      }
+        i {
+          padding: 0 0 0 10px;
+        }
+      }
+
+      .btn2:hover {
+        background-color: #70ffd5;
+      }
+
+      img {
+        width: 60%;
+        padding: 120px 0;
+      }
+
+      .img1 {
+        width: 15%;
+        right: 5%;
+        position: absolute;
+        top: 55%;
+      }
+    }
+
+
+
+
+  }
+
+  @keyframes spin{
+    0% {
+
+      transform: rotate(0deg);
+
+    }
+    100% {
+
+      transform: rotate(360deg);
+
+    }
+  }
+  @keyframes ball {
+    0% {
+
+      transform: scale(1);
+      opacity: 0.1;
+    }
+    50%{
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+  }
+
+  .always {
+    background-color: $body;
+    width: 100%;
+    padding: 40px 0 80px 0;
+
+    h1 {
+      font-size: 70px;
+      font-family: $space;
+      color: $gray-dark;
+      width: 95%;
+      padding: 0 0 0 20px;
+      line-height: 75px;
+    }
+
+    img {
+      text-align: center;
+    }
+  }
+
+  .mark {
+    background-color: $body;
+    background-image: url('../img/coaching3-section-bg1.svg');
+    background-repeat: no-repeat;
+    background-position: 55% 140px;
+    padding-bottom: 50px;
+
+    .img1 {
+      img {
+        border-radius: 40px;
+      }
+    }
+
+    h3 {
+      color: $green;
+      font-size: 50px;
+      font-family: $space;
+      width: 50%;
+      padding: 0 0 30px 0;
+    }
+
+    p {
+      color: $white;
+      font-size: 24px;
+      width: 75%;
+      font-family: $space;
+      font-weight: 800;
+      padding: 20px 0;
+    }
+
+    span {
+      font-size: 16px;
+      font-family: $inter;
+      color: $white;
+      line-height: 25px;
+    }
+
+    .img3 {
+      padding: 60px 0 0 0;
+    }
+
+  }
+
+  .icon1 {
+    background-color: $body;
+    padding: 10px 0 70px 0;
+
+    i {
+      width: 80px;
+      height: 80px;
+      border: 1px solid $green;
+      color: $green;
+      font-size: 30px;
+      line-height: 80px;
+      text-align: center;
+      border-radius: 50px;
+      transition: all 2s;
+    }
+
+    i:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .ways {
+    background-color: $body;
+
+    .box {
+      background-color: $white;
+      width: 100%;
+      padding: 80px 0 20px 80px;
+      border-radius: 10px;
+
+      h3 {
+        color: $black;
+        font-size: 55px;
+        font-family: $space;
+        padding-bottom: 40px;
+      }
+
+      p {
+        color: $gray-light;
+        font-size: 16px;
+        font-family: $inter;
+        width: 85%;
+        padding-bottom: 20px;
+      }
+
+      span {
+        color: $black;
+        font-size: 24px;
+        font-family: $space;
+        font-weight: 900;
+
+      }
+
+      form {
+        padding: 20px 0 0 10px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid $gray-light;
+          padding: 0 0 12px 12px;
+          font-size: 15px;
+          color: $gray-light;
+          width: 370px;
+        }
+      }
+
+      img {
+        width: 95%;
+      }
+
+      .btn3 {
+        background-color: $green;
+        color: $black-dark;
+        font-size: 15px;
+        font-family: $space;
+        font-weight: 900;
+        border: none;
+        padding: 12px 165px;
+        border-radius: 30px;
+        margin-top: 15px;
+        margin-left: 10px;
+        transition: all 1s;
+        a{
+          color: $black-dark;
+          font-weight: 900;
+        }
+      }
+
+      .btn3:hover {
+        background-color: #70ffd5;
+      }
+
+    }
+
+    h6 {
+      padding: 90px 0 30px 0;
+      color: $green;
+      font-size: 55px;
+      font-family: $space;
+      width: 70%;
+
+    }
+  }
+
+  .car {
+    background-image: url('../img/coaching3-section-bg2.webp');
+    background-size: cover;
+    background-color: $body;
+    background-position: center;
+
+    .car-content {
+      padding: 550px 0 100px 0;
+      width: 100%;
+
+      .no {
+        border-bottom: 1px solid #1D4854;
+
+        i {
+          color: $green;
+          font-size: 9px;
+          padding: 0 0 10px 0;
+        }
+
+        h1 {
+          font-size: 36px;
+          font-family: $space;
+          color: $white;
+
+          padding: 0 0 10px 20px;
+        }
+      }
+
+      p {
+        color: $white;
+        font-size: 16px;
+        font-family: $inter;
+        width: 70%;
+        padding: 40px 0 0 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .experience {
+    background-color: $body;
+
+    background-image: url('../img/coaching3-section-bg1 (2).svg');
+    background-position: 55% center;
+    background-repeat: no-repeat;
+    padding: 100px 30px 140px 0;
+
+    .box1 {
+
+      background-color: $green;
+      border-radius: 10px;
+      width: 100%;
+      padding: 70px 0 70px 50px;
+      position: relative;
+
+      .img4 {
+        img {
+          width: 354px;
+          height: 523px;
+          position: absolute;
+          top: -5%;
+        }
+      }
+
+      .text {
+        h2 {
+          color: $black;
+          font-size: 55px;
+          font-family: $space;
+          padding-bottom: 20px;
+        }
+
+        p {
+          color: $black;
+          font-size: 20px;
+          font-family: $space;
+          line-height: 1.2;
+          font-weight: 700;
+          width: 70%;
+        }
+
+        img {
+          padding: 70px 0 0 0;
+        }
+
+      }
+
+      h5 {
+        color: $black;
+        font-family: $inter;
+        font-size: 16px;
+        width: 80%;
+        padding: 60px 0 0 0;
+        font-weight: 100;
+      }
+
+    }
+
+    .box1::after {
+      position: absolute;
+      content: '';
+      border: 1px solid #8a8a8a61;
+      box-sizing: border-box;
+      right: 13%;
+      width: 400px;
+      top: 45%;
+    }
+
+    .box1::before {
+      position: absolute;
+      content: '';
+      border: 1px solid #8a8a8a61;
+      box-sizing: border-box;
+      right: 13%;
+      width: 400px;
+      top: 74%;
+    }
+
+  }
+
+  .training {
+    background-color: $body;
+
+    .box2 {
+      width: 100%;
+      border: 1px solid $green;
+      border-radius: 10px;
+      padding: 60px 56px 40px;
+
+      p {
+        color: $green;
+        font-size: 24px;
+        font-family: $space;
+        width: 72%;
+
+        font-weight: 900;
+      }
+
+      span {
+        color: $white;
+      }
+
+      .coach {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+
+        .text {
+          margin-bottom: 7px;
+
+          h1 {
+            color: $green;
+            font-size: 14px;
+            font-family: $space;
+            font-weight: 600;
+            width: 93%;
+            display: flex;
+            align-items: center;
+          }
+
+          h4 {
+            background-color: $bgcolor;
+            color: $gray-light;
+            font-size: 11px;
+            font-family: $space;
+            padding: 5px 10px;
+            height: 30px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 3px;
+          }
+        }
+
+      }
+
+      .coach::after {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        border: 1px solid #28393e;
+        width: 100%;
+      }
+
+      .coach::before {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        border: 1px solid $green;
+        width: 80%;
+        top: 37px;
+        z-index: 9999;
+      }
+
+      .cunsult {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+
+        .text {
+          margin-bottom: 7px;
+
+          h1 {
+            color: $green;
+            font-size: 14px;
+            font-family: $space;
+            font-weight: 600;
+            width: 93%;
+            display: flex;
+            align-items: center;
+          }
+
+          h4 {
+            background-color: $bgcolor;
+            color: $gray-light;
+            font-size: 11px;
+            font-family: $space;
+            padding: 5px 10px;
+            height: 30px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 3px;
+          }
+        }
+
+      }
+
+      .cunsult::after {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        border: 1px solid #28393e;
+        width: 100%;
+      }
+
+      .cunsult::before {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        border: 1px solid $green;
+        width: 88%;
+        top: 37px;
+        z-index: 9999;
+      }
+
+      .self {
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+
+        .text {
+          margin-bottom: 7px;
+
+          h1 {
+            color: $green;
+            font-size: 14px;
+            font-family: $space;
+            font-weight: 600;
+            width: 92%;
+            display: flex;
+            align-items: center;
+          }
+
+          h4 {
+            background-color: $bgcolor;
+            color: $gray-light;
+            font-size: 11px;
+            font-family: $space;
+            padding: 5px 10px;
+            height: 30px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 3px;
+          }
+        }
+
+      }
+
+      .self::after {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        border: 1px solid #28393e;
+        width: 100%;
+      }
+
+      .self::before {
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        border: 1px solid $green;
+        width: 80%;
+        top: 37px;
+        z-index: 9999;
+      }
+
+    }
+
+  }
+
+  .popular {
+    background-color: $body;
+    padding: 150px 90px 60px 90px;
+    position: relative;
+
+    .btn1 {
+      @include btn1;
+    }
+
+    h4 {
+      color: $green;
+      font-size: 55px;
+      font-family: $space;
+      padding: 20px 0 0 0;
+    }
+
+    .boxes {
+      padding: 50px 0;
+      position: relative;
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      .boxes-content {
+        position: absolute;
+        top: 55%;
+        padding: 0 50px;
+
+
+        h5 {
+          color: $white;
+          font-size: 24px;
+          font-family: $space;
+          width: 70%;
+          padding: 0 0 20px 0;
+        }
+
+        h3 {
+          color: $white;
+          font-size: 24px;
+          font-family: $space;
+
+          padding: 0 0 20px 0;
+        }
+
+        .no {
+          .weeks {
+            i {
+              color: $green;
+              font-size: 9px;
+            }
+
+            h6 {
+              color: $white;
+              font-size: 14px;
+              font-family: $space;
+              padding-left: 8px;
+            }
+          }
+
+          .lesson {
+            padding-left: 30px;
+
+            i {
+              color: $green;
+              font-size: 9px;
+            }
+
+            h6 {
+              color: $white;
+              font-size: 14px;
+              font-family: $space;
+              padding-left: 8px;
+            }
+          }
+        }
+
+      }
+
+      .bor {
+        border-bottom: 1px solid $gray-light;
+        width: 65%;
+        padding: 10px 0;
+
+      }
+      .bor1 {
+        border-bottom: 1px solid $gray-light;
+       
+        padding: 10px 0;
+
+      }
+
+      .heart {
+        padding: 15px 0;
+
+        i {
+          color: $white;
+          font-size: 18px;
+          width: 35px;
+          height: 35px;
+          background-color: $green;
+          text-align: center;
+          line-height: 35px;
+          border-radius: 50px;
+          margin: 0 3px;
+        }
+
+        .icon2 {
+          font-size: 20px;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          line-height: 35px;
+          border-radius: 50px;
+          border: 1px solid $black-dark;
+          background-color: transparent;
+          color: $black-dark;
+        }
+
+      }
+    }
+
+  }
+
+
+  .seminar {
+
+    padding: 100px 0;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .btn4 {
+      background-color: $green;
+      color: $bgcolor ;
+      font-size: 14px;
+      font-family: $space;
+      padding: 8px 30px;
+      border: none;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    h3 {
+      color: $black-dark;
+      font-size: 55px;
+      font-family: $space;
+      padding: 10px 0 30px 0;
+    }
+
+    .up {
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #62626256;
+
+      .come {
+        border-right: 1px solid #62626256;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        h2 {
+          color: $black;
+          font-size: 55px;
+          font-family: $space;
+
+        }
+
+        span {
+          color: #626262;
+          font-family: $space;
+          font-size: 16px;
+
+        }
+      }
+
+      .aerrow {
+
+        p {
+          color: $black;
+          font-size: 20px;
+          font-family: $space;
+          font-weight: 900;
+          text-align: left;
+          width: 80%;
+        }
+
+        i {
+          font-size: 30px;
+          color: $black;
+          padding: 0 0 0 30px;
+          transition: all 1s;
+        }
+        i:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+
+  }
+
+  .tell {
+    background-color: $body;
+    text-align: center;
+    padding: 100px 0;
+
+    h5 {
+      color: $green;
+      font-size: 55px;
+      font-family: $space;
+      width: 60%;
+      margin: 0 auto;
+      padding: 0 0 30px 0;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: $inter;
+      color: $white;
+      width: 65%;
+      margin: 0 auto;
+    }
+
+    img {
+      padding: 50px 0 0 0;
+    }
+  }
+
+  .pic {
+    width: 100%;
+
+    .man {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+      }
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+  }
+
+
+  .over {
+    background-color: $body;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+  background-image: url('../img/coaching3-section-bg5 (2).svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+   background-position: center;
+   
+   .img8{
+       width: 5%;
+       left: 10%;
+       position: absolute;
+       top: 25%;
+   }
+    h4 {
+      font-size: 55px;
+      font-family: $space;
+      color: $green;
+      text-align: center;
+      width: 45%;
+      margin: 0 auto;
+    }
+
+    span {
+      color: $white;
+    }
+
+    .picture {
+      padding: 40px 0;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      img{
+         opacity: .5;
+         transition: all 1s;
+       }
+       img:hover{
+        opacity: 1;
+      }
+      
+      .img7 {
+        position: relative;
+       img{
+        display: block;
+        width: 100%;
+        opacity: 1;
+       }
+       
+      }
+
+      .img7::after {
+        position: absolute;
+        content: '';
+        height: 6px;
+        width: 100%;
+        background-color: $green;
+        position: absolute;
+        left: 0;
+
+
+      }
+    }
+
+    .lorem {
+      p {
+        color: $white;
+        font-size: 17px;
+        font-family: $space;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      i {
+        width: 53px;
+        height: 53px;
+        color: $green;
+        background-color: $bgcolor;
+        border-radius: 50px;
+        line-height: 53px;
+        text-align: center;
+      }
+    }
+
+    .icon {
+      i {
+        padding: 35px 0 15px 3px;
+        font-size: 5px;
+        color: $green;
+
+      }
+    }
+
+    h2 {
+      color: $white;
+      font-size: 20px;
+      font-family: $space;
+      padding: 0 0 10px 0;
+    }
+
+    h5 {
+      color: $gray;
+      font-size: 16px;
+      font-family: $inter;
+    }
+
+  }
+
+  .call {
+   
+    background-color: $body;
+    position: relative;
+     background-image: url('../img/coaching3-section-bg1 (1).svg');
+    
+     background-repeat: no-repeat;
+     background-position: 53%   center;
+     padding: 0 0 100px 0;
+    .message {
+    
+      
+
+      .large {
+        background-color: $bgcolor;
+        width: 100%;
+        position: relative;
+        padding: 120px 0;
+        border-radius: 10px 10px 0 0;
+
+        img {
+          bottom: -40px;
+          width: 312px;
+          height: 312px;
+          position: absolute;
+          left: 5%;
+          border-radius: 20px;
+        }
+
+        h6 {
+          font-size: 22px;
+          font-family: $space;
+          color: $white;
+          padding: 0 0 12px 0;
+        }
+
+        h1 {
+          font-size: 36px;
+          font-family: $space;
+          color: $green;
+
+        }
+      }
+
+      .white {
+        background-color: $white;
+        width: 100%;
+        text-align: left;
+        padding: 70px;
+        border-radius: 0 0 10px 10px;
+
+        .write {
+          padding: 30px 0 0 0;
+
+          span {
+            font-size: 16px;
+            font-family: $inter;
+            color: $gray-dark;
+            font-weight: 500;
+
+          }
+
+          h3 {
+            font-size: 24px;
+            font-family: $space;
+            color: $black-dark;
+            padding: 10px 0 0 0;
+          }
+
+          .some {
+            padding: 20px 0;
+
+          }
+
+          i {
+            padding: 0 10px;
+            width: 58px;
+            height: 58px;
+            background-color: #3a599b16;
+            color: $black-dark;
+            line-height: 58px;
+            text-align: center;
+            font-size: 20px;
+            transition: all 1s;
+          }
+         
+        }
+        .icon6:hover{
+          background-color: rgba(255, 0, 0, 0.824);
+          color: $white;
+        }
+        .icon5:hover{
+          background-color: rgba(32, 154, 199, 0.881);
+          color: $white;
+        }
+        .icon4:hover{
+          background-color: rgba(30, 93, 195, 0.824);
+          color: $white;
+        }
+        .icon3:hover{
+          background-color: rgba(11, 65, 147, 0.902);
+          color: $white;
+        }
+        form {
+          input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #dcdcdc;
+            padding: 0 0 15px 10px;
+            font-size: 15px;
+            color: $black-dark;
+            margin-bottom: 25px;
+
+          }
+
+        }
+
+        .btn5 {
+          color: $black;
+          background-color: $green;
+          font-family: $space;
+          font-size: 15px;
+          font-weight: 700;
+          border: none;
+          padding: 10px 30px;
+          border-radius: 30px;
+          transition: all 2s;
+          cursor: pointer;
+        }
+        .btn5:hover{
+          background-color: #70ffd5;
+        }
+      }
+    }
+
+  }
+
+  footer {
+    padding: 20px 0;
+    background-color: $body;
+    border-top: 1px solid $gray-dark;
+
+    p {
+      color: $white;
+      font-size: 16px;
+      font-family: $inter;
+
+      a {
+        color: $white;
+        font-size: 16px;
+        font-family: $inter;
+      }
+    }
+
+    a:hover {
+      color: $green;
+      text-decoration: underline;
+    }
+
+  .icon{
+    i {
+      padding: 0 10px;
+      color: $white;
+      transition: all 1s;
+    }
+
+    i:hover {
+      color: $green;
+    }
+  }
+
+    .icon7 {
+     i{
+      color: $white;
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      line-height: 44px;
+      background-color: $green;
+      border: 1px solid $white;
+      border-radius: 50px;
+      margin-left: 10px;
+      transition: all 2s;
+     }
+     i:hover{
+      background-color: #70ffd5;
+     }
+    }
+    
+    
+  }
